@@ -5,14 +5,14 @@ class Api::ConnectionsController < ApplicationController
   end
   
   def create
-    @connection.create(
-      user_id: current_user.id,
-      connection_id: params[:id]
+    @connection1 = Connection.create(
+      user_id: params[:user_id],
+      connection_id: params[:connection_id]
     )
-    @connection.create(
-      user_id: params[:id],
-      connection_id: current_user.id
+    @connection2 = Connection.create(
+      user_id: params[:connection_id],
+      connection_id: params[:user_id]
     )
-    render 'index.json.jb'
+    render 'show.json.jb'
   end
 end

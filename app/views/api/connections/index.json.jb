@@ -1,0 +1,7 @@
+@connections.map do |connection|
+  {
+    id: connection.id,
+    user_id: connection.user_id,
+    connection_id: connection.connection_id
+  }
+end

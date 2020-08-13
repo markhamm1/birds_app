@@ -1,0 +1,12 @@
+[
+  {
+    id: @connection1.id,
+    user_id: @connection1.user_id,
+    connection_id: @connection1.connection_id,
+  },
+  {
+    id: @connection2.id,
+    user_id: @connection2.user_id,
+    connection_id: @connection2.connection_id,
+  }
+]
