@@ -10,5 +10,12 @@ Rails.application.routes.draw do
 
     get "/connections" => "connections#index"
     post "/connections" => "connections#create"
+    
+    get "/sightings" => "sightings#index"
+    post "/sightings" => "sightings#create"
+    
+    get "/sessions" => "sessions#index"
+    get "/sessions/:id" => "sessions#show"
+
   end
 end
