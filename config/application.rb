@@ -19,6 +19,16 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+# Unsplash.configure do |config|
+#   config.application_access_key = "_pBIAfuQbEEw_QWMRaDr-CuGA8u5dWF9iRhLHEQhG7Y"
+#   config.application_secret = "Omioe8KKOq8Wh0rzX1in_UpnL7jgaTNtkrc_vF-bIjI"
+#   config.application_redirect_uri = "https://your-application.com/oauth/callback"
+#   config.utm_source = "alices_terrific_client_app"
+
+#   # optional:
+#   config.logger = MyCustomLogger.new
+# end
+
 module BirdsApp
   class Application < Rails::Application
     config.generators.assets = false

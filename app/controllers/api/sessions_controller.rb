@@ -14,6 +14,7 @@ class Api::SessionsController < ApplicationController
       user_id: params[:user_id],
       location: params[:location]
     )
+    
     render 'show.json.jb'
   end
 end
