@@ -1,0 +1,3 @@
+@sightings.map do |sighting|
+  render partial: 'sighting.json.jb', locals: {sighting: sighting}
+end

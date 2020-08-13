@@ -8,7 +8,7 @@ class Api::UsersController < ApplicationController
     @user = User.create(
       email: params[:email],
       username: params[:username],
-      password: params[:password]
+      password_digest: params[:password]
     )
     render 'show.json.jb'
   end
