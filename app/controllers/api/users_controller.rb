@@ -4,6 +4,11 @@ class Api::UsersController < ApplicationController
     render 'index.json.jb'
   end
   
+  def show
+    @user = User.find_by(id: params[:id])
+    render 'show.json.jb'
+  end
+  
   def create
     user = User.new(
       username: params[:name],
