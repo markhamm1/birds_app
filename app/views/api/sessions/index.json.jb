@@ -1,0 +1,3 @@
+@sessions.map do |session|
+  render partial: 'session.json.jb', locals: {session: session}
+end

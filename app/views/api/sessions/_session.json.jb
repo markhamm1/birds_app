@@ -1,0 +1,6 @@
+{
+  id: session.id,
+  user_id: session.user_id,
+  location: session.location,
+  created_at: session.created_at,
+}

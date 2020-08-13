@@ -1,4 +1,5 @@
 {
+  id: sighting.id,
   user_id: sighting.user_id,
   bird_name: sighting.bird_name,
   session_id: sighting.session_id
