@@ -21,5 +21,7 @@ Rails.application.routes.draw do
     post "/logins" => "logins#create"
 
     get "/birds" => "birds#index"
+
+    get "/regions" => "regions#index"
   end
 end
