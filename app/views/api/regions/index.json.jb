@@ -1,1 +1,6 @@
-@regions
+@regions.map do |region|
+{
+  name: region["name"],
+  code: region["code"]
+}
+end

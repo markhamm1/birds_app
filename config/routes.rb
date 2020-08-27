@@ -23,5 +23,7 @@ Rails.application.routes.draw do
     get "/birds" => "birds#index"
 
     get "/regions" => "regions#index"
+
+    get "/states" => "states#index"
   end
 end

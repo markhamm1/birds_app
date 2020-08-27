@@ -1,0 +1,6 @@
+@states.map do |state|
+{
+  name: state["name"],
+  code: state["code"]
+}
+end
