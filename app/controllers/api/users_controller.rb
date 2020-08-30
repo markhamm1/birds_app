@@ -6,6 +6,7 @@ class Api::UsersController < ApplicationController
   
   def show
     @user = User.find_by(id: params[:id])
+    @sessions = Session.where(user_id: params[:id])
     render 'show.json.jb'
   end
   
