@@ -1,6 +1,7 @@
 {
   id: session.id,
   user_id: session.user_id,
-  # location: session.location,
+  state: session.state,
+  county: session.county,
   created_at: session.created_at,
 }

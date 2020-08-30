@@ -1,3 +1,9 @@
 @sessions.map do |session|
-  render partial: 'session.json.jb', locals: {session: session}
+  {
+    id: session.id,
+    user_id: session.user_id,
+    state: session.state,
+    county: session.county,
+    created_at: session.created_at,
+  }
 end

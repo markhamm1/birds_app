@@ -1,11 +1,12 @@
 class Api::SessionsController < ApplicationController
   def index
-    @sessions = Session.all
+    @sessions = Session.where(user_id: current_user.id)
     render 'index.json.jb'
   end
 
   def show
     @session = Session.find_by(id: params[:id])
+    @sightings = Sighting.where(session_id: params[:id])
     render 'show.json.jb'
   end
 
