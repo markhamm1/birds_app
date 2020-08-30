@@ -10,10 +10,23 @@ class Api::SessionsController < ApplicationController
   end
 
   def create
+    p params
+    p "*" * 88
+    p current_user.id
+    p "*" * 88
+    
     @session = Session.create(
-      user_id: params[:user_id],
-      location: params[:location]
+      user_id: current_user.id,
+      state: params[:state],
+      county: params[:county]  
     )
+    params[:birds].each do |bird|
+      @sighting = Sighting.create(
+        user_id: current_user.id,
+        bird_name: bird,
+        session_id: @session.id
+      )
+    end
     
     render 'show.json.jb'
   end
