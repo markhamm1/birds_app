@@ -3,5 +3,8 @@
   user_id: @session.user_id,
   state: @session.state,
   county: @session.county,
-  created_at: @session.created_at
+  created_at: @session.created_at,
+  birds: @sightings.map do |sighting|
+    {bird: sighting.bird_name}
+  end
 }

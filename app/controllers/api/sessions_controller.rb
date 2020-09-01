@@ -29,7 +29,9 @@ class Api::SessionsController < ApplicationController
         session_id: @session.id
       )
     end
-    
+
+    @sightings = Sighting.where(session_id: @session[:id])
+
     render 'show.json.jb'
   end
 end
