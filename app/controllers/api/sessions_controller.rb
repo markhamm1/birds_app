@@ -20,7 +20,7 @@ class Api::SessionsController < ApplicationController
     @session = Session.create(
       user_id: current_user.id,
       state: params[:state],
-      county: params[:county]  
+      county: params[:county],
     )
     params[:birds].each do |bird|
       @sighting = Sighting.create(
