@@ -26,5 +26,7 @@ Rails.application.routes.draw do
     get "/regions" => "regions#index"
 
     get "/states" => "states#index"
+
+    get "/pictures" => "pictures#index"
   end
 end
