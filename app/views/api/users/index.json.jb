@@ -4,5 +4,6 @@
     email: user.email,
     username: user.username,
     password: user.password_digest,
+    session_count: user.session_count
   }
 end

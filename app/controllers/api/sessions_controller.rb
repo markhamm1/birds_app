@@ -30,6 +30,17 @@ class Api::SessionsController < ApplicationController
       )
     end
 
+    sessions = Session.where(user_id: current_user.id)
+    p "*" * 88
+    p sessions.length
+    user = User.find_by(id: current_user.id)
+    p user
+    p user.session_count
+    user.session_count = sessions.length
+    p user.session_count
+    p "*" * 88
+    user.save
+    p user
     @sightings = Sighting.where(session_id: @session[:id])
 
     render 'show.json.jb'
