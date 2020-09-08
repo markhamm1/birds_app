@@ -1,9 +1,5 @@
 class Api::RegionsController < ApplicationController
   def index
-    p params
-    # p "-" *88
-    # p params[:0]
-    # p "-" *88
     
     region_response = HTTP.headers({
       "X-eBirdApiToken" => "#{Rails.application.credentials.ebird_api[:api_key]}"

@@ -1,6 +1,5 @@
 class Api::SessionsController < ApplicationController
   def index
-    p params
     @sessions = Session.where(user_id: current_user.id)
     render 'index.json.jb'
   end
@@ -12,10 +11,6 @@ class Api::SessionsController < ApplicationController
   end
 
   def create
-    p params
-    p "*" * 88
-    p current_user.id
-    p "*" * 88
     
     @session = Session.create(
       user_id: current_user.id,

@@ -17,7 +17,4 @@ class Api::LoginsController < ApplicationController
     end
   end
 
-  # p "*" * 88
-  # p current_user
-  # p "*" * 88
 end

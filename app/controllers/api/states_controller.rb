@@ -1,6 +1,5 @@
 class Api::StatesController < ApplicationController
   def index
-    p params
 
     response = HTTP.headers({
       "X-eBirdApiToken" => "#{Rails.application.credentials.ebird_api[:api_key]}"
