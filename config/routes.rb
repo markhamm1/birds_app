@@ -28,5 +28,9 @@ Rails.application.routes.draw do
     get "/states" => "states#index"
 
     get "/pictures" => "pictures#index"
+
   end
+
+  root 'application#index'
+  get '/*path', to: 'application#index'
 end
